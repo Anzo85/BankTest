@@ -18,8 +18,15 @@ public class BankMain {
 
         System.out.println("Insert your card!");
         BufferedReader set = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader op1 = new BufferedReader(new InputStreamReader(System.in));
         String key = set.readLine();
         if ( cards.isEmpty() == false && cards.toString().contains(key) ){
+            System.out.println(cards);
+            System.out.println("Insert Operation:");
+            String opKey = op1.readLine();
+            if (opKey.equals("add")){
+                testCard.account = testCard.account+100;
+            }
             System.out.println(cards);
         } else {
 
